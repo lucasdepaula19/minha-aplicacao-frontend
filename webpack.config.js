@@ -29,6 +29,17 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.(jpe?g|ico|png|gif|svg)$/i,
+                loader: 'file-loader?name=img/[name].[ext]'
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    { loader: "style-loader" },
+                    { loader: "css-loader" }
+                ]
             }
         ]
     },
